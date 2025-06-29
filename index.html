@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONIX - Pakaian Trendi</title>
+    <!-- Memuat Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Memuat Google Fonts - Inter untuk tipografi -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Menghubungkan ke file CSS kustom Anda -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-inter bg-gray-100 antialiased">
+    <!-- Bagian Header -->
+    <header class="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <div class="logo"><img src="img/konix.png" alt=""></div>
+            <!-- Navigasi Desktop -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="katalog_product.html">Product</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Ikon Keranjang dan Profil (hanya terlihat di desktop) -->
+            <div class="header-icons">
+                <a href="keranjang.html" class="icon"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html" class="icon"><i class="fas fa-user-circle"></i></a> <!-- Tautan ke halaman login -->
+            </div>
+            <!-- Tombol Hamburger untuk Navigasi Mobile/Tablet -->
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Navigasi Mobile/Tablet (tersembunyi secara default) -->
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="katalog_product.html">Product</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+                <li><a href="keranjang.html"><i class="fas fa-shopping-cart"></i> Keranjang</a></li>
+                <li><a href="login.html"><i class="fas fa-user-circle"></i> Profil</a></li> <!-- Tautan ke halaman login -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian Hero -->
+    <section class="hero-section">
+        <div class="container hero-container">
+            <!-- Konten Kiri (Teks) -->
+            <div class="hero-content">
+                <h1>Pakaian Trendi <br> dan Nyaman untuk Gen Z</h1>
+                <p>Kami menghadirkan pakaian yang didesain khusus untuk generasi Z. Nikmati kombinasi sempurna antara gaya kasual hingga formal dengan bahan premium dan potongan yang modern.</p>
+                <!-- <button class="btn btn-primary">Shop Now</button> -->
+                <a href="katalog_product.html" class="btn btn-primary">Shop Now</a>
+            </div>
+            <!-- Gambar Kanan -->
+            <div class="hero-image">
+                <img src="img/img_1.png" alt="Pakaian Trendi">
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian About Us -->
+    <section class="about-us-section">
+        <div class="container about-us-container">
+            <!-- Gambar Kiri -->
+            <div class="about-us-image">
+                <img src="img/img_2.png" alt="About Us">
+            </div>
+            <!-- Konten Kanan (Teks) -->
+            <div class="about-us-content">
+                <h2>BEREKSPRESI<br> <span>DENGAN FASHION</span></h2>
+                <p>Daya tarik di Konix, tempat anak muda lahir! Fashion yang berani, dan penuh karakter. Kami memahami bahwa gaya personal adalah cara terbaik untuk berekspresi. Mari ciptakan inspirasi mode Anda bersama kami.</p>
+                <a href="about.html" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Fitur / Keunggulan -->
+    <section class="features-section">
+        <div class="container features-container">
+            <!-- Kartu Fitur 1 -->
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                <h3>Gratis Pengiriman</h3>
+                <p>Minimal order 3 produk</p>
+            </div>
+            <!-- Kartu Fitur 2 -->
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-undo-alt"></i></div>
+                <h3>10 hari pengembalian</h3>
+                <p>Jika terjadi kesalahan produk</p>
+            </div>
+            <!-- Kartu Fitur 3 -->
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-award"></i></div>
+                <h3>Garansi Kualitas</h3>
+                <p>Berlaku untuk semua produk</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Best Seller -->
+    <section class="best-seller-section">
+        <div class="container best-seller-container">
+            <h2 class="section-title">Best Seller</h2>
+            <div class="product-grid">
+                <!-- Produk 1 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="img/katalog_baju/Baju_1.png" alt="Baju 1">
+                        <span class="badge">PROMO</span>
+                    </div>
+                    <h3>Born Free</h3>
+                    <p class="price">Rp. 120K <s class="text-sm font-normal text-gray-400">Rp. 200K</s></p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-gray-500 ml-2">(4.5)</span>
+                    </div>
+                </div>
+                <!-- Produk 2 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="img/katalog_baju/Baju_2.png" alt="Baju 2">
+                        <span class="badge">PROMO</span>
+                    </div>
+                    <h3>Tokyo Limited</h3>
+                    <p class="price">Rp. 95K <s class="text-sm font-normal text-gray-400">Rp. 150K</s></p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-gray-500 ml-2">(4.5)</span>
+                    </div>
+                </div>
+                <!-- Produk 3 -->
+                <div class="product-card">
+                    <div class="product-image-wrapper">
+                        <img src="img/katalog_baju/Baju_3.png" alt="Baju 3">
+                        <span class="badge">PROMO</span>
+                    </div>
+                    <h3>Rich Money</h3>
+                    <p class="price">Rp. 110K <s class="text-sm font-normal text-gray-400">Rp. 190K</s></p>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                        <span class="text-gray-500 ml-2">(4.5)</span>
+                    </div>
+                </div>
+            </div>
+            <a href="katalog_product.html" class="btn btn-outline">View all product</a>
+        </div>
+    </section>
+
+    <!-- Bagian Testimoni -->
+    <section class="testimonial-section">
+        <div class="container testimonial-container">
+            <h2 class="section-title">Testimoni</h2>
+            <div class="testimonial-grid">
+                <!-- Testimoni 1 -->
+                <div class="testimonial-card">
+                    <p class="quote">"Desain yang sangat bagus! Cocok untuk yang suka dengan gaya streetwear tapi tetap elegan. Bahannya juga adem dan nyaman dipakai seharian."</p>
+                    <div class="author-info">
+                        <img src="img/Testimoni/Jajang.png" alt="Jajang Irawan">
+                        <div>
+                            <h4>Jajang Irawan</h4>
+                            <p>Customer</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-quote-right quote-icon"></i>
+                </div>
+                <!-- Testimoni 2 -->
+                <div class="testimonial-card">
+                    <p class="quote">"Produknya tidak mengecewakan. Kualitas jahitan rapi, warna tidak luntur, dan sesuai dengan gambar. Pengiriman juga cepat. Recomended!"</p>
+                    <div class="author-info">
+                        <img src="img/Testimoni/Fadil.png" alt="Ahmad Fadilah">
+                        <div>
+                            <h4>Ahmad Fadilah</h4>
+                            <p>Customer</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-quote-right quote-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bagian Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Kolom 1: About Us -->
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Konix adalah merek pakaian yang berfokus pada gaya trendi dan kenyamanan untuk Gen Z. Kami berkomitmen untuk menyediakan pakaian berkualitas tinggi yang mendukung ekspresi diri Anda.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ahmad.fadilah.338211/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/fadillmd_/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/6281212407746" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Kolom 2: Page Links -->
+            <div class="footer-column">
+                <h3>Page</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="katalog_product.html">Product</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Contact Information -->
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> +62 812 1240 7746</li>
+                    <li><i class="fab fa-instagram"></i> @konix.cloth</li>
+                    <li><i class="fas fa-envelope"></i> konixcloth@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KONIX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom Success Modal (dipindahkan ke sini) -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <p class="modal-message">Login kamu sukses!</p>
+        </div>
+    </div>
+
+    <!-- JavaScript untuk menu hamburger dan modal notifikasi login -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu functionality
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const navMobile = document.querySelector('.nav-mobile');
+
+            if (hamburgerMenu && navMobile) {
+                hamburgerMenu.addEventListener('click', function() {
+                    navMobile.classList.toggle('active');
+                });
+
+                navMobile.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMobile.classList.remove('active');
+                    });
+                });
+            }
+
+            // Login success modal functionality (dipindahkan dari login.html)
+            const urlParams = new URLSearchParams(window.location.search);
+            const loginSuccess = urlParams.get('login_success');
+            const successModal = document.getElementById('successModal');
+            const closeButton = document.querySelector('#successModal .close-button');
+            const modalMessage = document.querySelector('#successModal .modal-message');
+
+            if (loginSuccess === 'true' && successModal && modalMessage) {
+                modalMessage.textContent = "Login kamu sukses!";
+                successModal.style.display = "flex"; // Gunakan flex untuk centering
+
+                // Opsional: Hapus parameter dari URL agar tidak muncul lagi saat refresh
+                history.replaceState(null, '', window.location.pathname);
+            }
+
+            // Close modal when close button is clicked
+            if (closeButton) {
+                closeButton.addEventListener('click', function() {
+                    successModal.style.display = "none";
+                });
+            }
+
+            // Close modal when clicking outside of the modal content
+            window.addEventListener('click', function(event) {
+                if (event.target === successModal) {
+                    successModal.style.display = "none";
+                }
+            });
+        });
+    </script>
+</body>
+</html>

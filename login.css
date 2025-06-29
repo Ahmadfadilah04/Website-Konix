@@ -1,0 +1,411 @@
+/* Import font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset dasar dan tipografi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f5f5f5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Variabel CSS untuk warna (konsisten dengan halaman lain) */
+:root {
+    --primary-color: #20c997; /* Teal */
+    --primary-dark-color: #1a9c78; /* Teal lebih gelap */
+    --secondary-color: #ffffff; /* Putih */
+    --text-color: #333333; /* Abu-abu gelap */
+    --light-gray: #f5f5f5; /* Abu-abu terang */
+    --medium-gray: #6b7280; /* Abu-abu sedang untuk teks */
+    --dark-gray: #4b5563; /* Abu-abu gelap untuk judul */
+    --google-blue: #4285F4; /* Google brand color */
+    --error-red: #dc3545; /* Merah untuk pesan error */
+}
+
+.login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Set minimum height to fill viewport */
+    background-color: var(--light-gray);
+    padding: 20px; /* Padding overall for smaller screens */
+}
+
+.login-container {
+    width: 100%;
+    max-width: 900px; /* Maksimum lebar container */
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative; /* Untuk posisi tombol back */
+}
+
+.back-button-wrapper {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--secondary-color); /* Warna putih karena background panel kiri */
+    font-weight: 500;
+    padding: 10px 15px;
+    background-color: rgba(0, 0, 0, 0.2); /* Latar belakang transparan gelap */
+    border-radius: 9999px;
+    transition: background-color 0.2s ease;
+}
+
+.back-button i {
+    margin-right: 8px;
+}
+
+.back-button:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.login-content-wrapper {
+    display: flex;
+    min-height: 550px; /* Tinggi minimum agar konten terlihat baik */
+}
+
+.login-left-panel {
+    flex: 1;
+    background: linear-gradient(to bottom right, var(--primary-color), var(--primary-dark-color));
+    color: var(--secondary-color);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.konix-logo-large {
+    font-size: 3.5rem; /* Ukuran besar untuk logo di panel */
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.konix-description {
+    font-size: 1rem; /* ~16px */
+    line-height: 1.6;
+    max-width: 350px;
+}
+
+.login-right-panel {
+    flex: 1;
+    padding: 40px;
+    background-color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.welcome-title {
+    font-size: 2.5rem; /* ~40px */
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.login-form .form-group {
+    margin-bottom: 20px;
+}
+
+.login-form label {
+    display: block;
+    font-size: 0.9375rem; /* ~15px */
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+}
+
+.login-form input[type="email"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: var(--text-color);
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    outline: none;
+}
+
+.login-form input::placeholder {
+    color: #a0aec0;
+}
+
+.login-form input:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(32, 201, 151, 0.2);
+}
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 0.9375rem;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+    color: var(--medium-gray);
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 8px;
+    accent-color: var(--primary-color); /* Warna checkbox */
+}
+
+.forgot-password {
+    color: var(--medium-gray);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.forgot-password:hover {
+    color: var(--primary-color);
+}
+
+.error-message {
+    color: var(--error-red);
+    font-size: 0.875rem;
+    margin-top: -15px; /* Sesuaikan dengan margin-bottom form-group */
+    margin-bottom: 15px;
+    text-align: center;
+    display: none; /* Sembunyikan secara default */
+}
+
+.login-button {
+    display: block;
+    width: 100%;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.125rem; /* ~18px */
+    font-weight: 600;
+    border-radius: 9999px; /* Fully rounded */
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 25px;
+}
+
+.login-button:hover {
+    background-color: var(--primary-dark-color);
+    transform: translateY(-2px);
+}
+
+.divider {
+    text-align: center;
+    margin-bottom: 25px;
+    position: relative;
+    color: var(--medium-gray);
+    font-size: 0.875rem;
+}
+
+.divider::before,
+.divider::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 40%;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+
+.divider::before {
+    left: 0;
+}
+
+.divider::after {
+    right: 0;
+}
+
+.divider span {
+    background-color: var(--secondary-color);
+    padding: 0 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.google-login-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--google-blue);
+    color: var(--secondary-color);
+    border: none;
+    padding: 15px 25px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 9999px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.google-login-button i {
+    margin-right: 10px;
+    font-size: 1.25rem;
+}
+
+.google-login-button:hover {
+    background-color: #357ae8; /* Darker Google blue */
+    transform: translateY(-2px);
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet (Max-width 768px) */
+@media (max-width: 768px) {
+    .login-container {
+        max-width: 600px;
+    }
+
+    .login-content-wrapper {
+        flex-direction: column; /* Stack panels vertically */
+        min-height: auto; /* Allow height to adjust */
+    }
+
+    .login-left-panel {
+        padding: 30px;
+        border-radius: 8px 8px 0 0; /* Rounded top corners */
+    }
+
+    .konix-logo-large {
+        font-size: 3rem;
+    }
+
+    .konix-description {
+        font-size: 0.9375rem; /* ~15px */
+    }
+
+    .login-right-panel {
+        padding: 30px;
+        border-radius: 0 0 8px 8px; /* Rounded bottom corners */
+    }
+
+    .welcome-title {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .login-form label,
+    .login-form input,
+    .form-options {
+        font-size: 0.9rem;
+    }
+
+    .login-form input {
+        padding: 10px 12px;
+    }
+
+    .login-button,
+    .google-login-button {
+        padding: 12px 20px;
+        font-size: 1rem;
+    }
+
+    .google-login-button i {
+        font-size: 1.1rem;
+    }
+}
+
+/* Handphone (Max-width 480px) */
+@media (max-width: 480px) {
+    .login-section {
+        padding: 15px;
+    }
+
+    .login-container {
+        border-radius: 8px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .back-button-wrapper {
+        top: 15px;
+        left: 15px;
+    }
+
+    .back-button {
+        padding: 8px 12px;
+        font-size: 0.875rem;
+    }
+
+    .login-left-panel {
+        padding: 25px;
+    }
+
+    .konix-logo-large {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .konix-description {
+        font-size: 0.875rem;
+    }
+
+    .login-right-panel {
+        padding: 25px;
+    }
+
+    .welcome-title {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+    }
+
+    .login-form label,
+    .login-form input,
+    .form-options {
+        font-size: 0.875rem;
+    }
+
+    .login-form input {
+        padding: 10px;
+    }
+
+    .form-options {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .login-button,
+    .google-login-button {
+        padding: 10px 15px;
+        font-size: 0.9375rem;
+    }
+
+    .google-login-button i {
+        font-size: 1rem;
+    }
+
+    .divider {
+        margin-bottom: 20px;
+    }
+}

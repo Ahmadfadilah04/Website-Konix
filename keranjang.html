@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONIX - Keranjang Belanja</title>
+    <!-- Memuat Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Memuat Google Fonts - Inter untuk tipografi -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Menghubungkan ke file CSS kustom untuk halaman Keranjang -->
+    <link rel="stylesheet" href="cart.css">
+    <!-- Menghubungkan ke file CSS utama (style.css) untuk header/footer dan variabel global -->
+    <link rel="stylesheet" href="keranjang.css">
+</head>
+<body>
+    <!-- Bagian Header (menggunakan kembali dari desain sebelumnya) -->
+     <header class="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <div class="logo"><img src="img/konix.png" alt=""></div>
+            <!-- Navigasi Desktop -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="katalog_product.html">Product</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Ikon Keranjang dan Profil (hanya terlihat di desktop) -->
+            <div class="header-icons">
+                <a href="keranjang.html" class="icon"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html" class="icon"><i class="fas fa-user-circle"></i></a> <!-- Tautan ke halaman login -->
+            </div>
+            <!-- Tombol Hamburger untuk Navigasi Mobile/Tablet -->
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Navigasi Mobile/Tablet (tersembunyi secara default) -->
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="katalog_product.html">Product</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+                <li><a href="keranjang.html"><i class="fas fa-shopping-cart"></i> Keranjang</a></li>
+                <li><a href="login.html"><i class="fas fa-user-circle"></i> Profil</a></li> <!-- Tautan ke halaman login -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian Keranjang Belanja -->
+    <section class="cart-section">
+        <div class="container cart-container">
+            <!-- Tombol Kembali -->
+            <div class="back-button-wrapper">
+                <a href="katalog_product.html" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+            </div>
+
+            <h1 class="cart-title">Shopping Cart</h1>
+
+            <div class="cart-content-wrapper">
+                <!-- Sisi Kiri: Daftar Produk di Keranjang -->
+                <div class="cart-items-panel">
+                    <!-- Item Keranjang 1 -->
+                    <div class="cart-item">
+                        <img src="img/katalog_baju/Baju_5.png" alt="Baju [A01] Kaos Nusantara">
+                        <div class="item-details">
+                            <h3 class="item-name">Friend Forever</h3>
+                            <p class="item-size">Size : L</p>
+                            <div class="quantity-control">
+                                <button class="quantity-btn minus-btn" data-id="item1">-</button>
+                                <span class="quantity-value" id="quantity-item1">1</span>
+                                <button class="quantity-btn plus-btn" data-id="item1">+</button>
+                            </div>
+                        </div>
+                        <p class="item-price" data-base-price="12.5">Rp. 99.000 <s>Rp. 150.000</s></p>
+                    </div>
+
+                    <!-- Item Keranjang 2 -->
+                    <div class="cart-item">
+                        <img src="img/katalog_baju/Baju_1.png" alt="Baju [A02] Kaos Nusantara">
+                        <div class="item-details">
+                            <h3 class="item-name">Born Free</h3>
+                            <p class="item-size">Size : L</p>
+                            <div class="quantity-control">
+                                <button class="quantity-btn minus-btn" data-id="item2">-</button>
+                                <span class="quantity-value" id="quantity-item2">1</span>
+                                <button class="quantity-btn plus-btn" data-id="item2">+</button>
+                            </div>
+                        </div>
+                        <p class="item-price" data-base-price="10.2">Rp. 120.000 <s>Rp. 200.000</s></p>
+                    </div>
+
+                    <!-- Kupon Code Section -->
+                    <div class="coupon-section">
+                        <input type="text" placeholder="Coupon Code" class="coupon-input">
+                        <button class="apply-coupon-button">Apply Code</button>
+                        <p class="coupon-hint">*Masukkan Kode Kupon yang berlaku</p>
+                    </div>
+                </div>
+
+                <!-- Sisi Kanan: Ringkasan Pesanan -->
+                <div class="order-summary-panel">
+                    <h2 class="summary-title">Order Summary</h2>
+                    <div class="summary-items">
+                        <div class="summary-item">
+                            <span>Friend Forever</span>
+                            <span>Rp. 99.000</span>
+                        </div>
+                        <div class="summary-item">
+                            <span>Born Free</span>
+                            <span>Rp. 120.000</span>
+                        </div>
+                    </div>
+                    <div class="summary-total">
+                        <span>Total</span>
+                        <span>Rp. 219.000</span>
+                    </div>
+                    <button class="checkout-button">Proses to Checkout</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Bagian Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Kolom 1: About Us -->
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Konix adalah merek pakaian yang berfokus pada gaya trendi dan kenyamanan untuk Gen Z. Kami berkomitmen untuk menyediakan pakaian berkualitas tinggi yang mendukung ekspresi diri Anda.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ahmad.fadilah.338211/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/fadillmd_/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/6281212407746" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Kolom 2: Page Links -->
+            <div class="footer-column">
+                <h3>Page</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="katalog_product.html">Product</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Contact Information -->
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> +62 812 1240 7746</li>
+                    <li><i class="fab fa-instagram"></i> @konix.cloth</li>
+                    <li><i class="fas fa-envelope"></i> konixcloth@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KONIX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk menu hamburger dan fungsionalitas keranjang -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu functionality
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const navMobile = document.querySelector('.nav-mobile');
+
+            if (hamburgerMenu && navMobile) {
+                hamburgerMenu.addEventListener('click', function() {
+                    navMobile.classList.toggle('active');
+                });
+
+                navMobile.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMobile.classList.remove('active');
+                    });
+                });
+            }
+
+            // Cart Quantity Control and Total Calculation
+            function updateCartTotal() {
+                let total = 0;
+                document.querySelectorAll('.cart-item').forEach(item => {
+                    const quantity = parseInt(item.querySelector('.quantity-value').textContent);
+                    const basePrice = parseFloat(item.querySelector('.item-price').dataset.basePrice);
+                    const itemTotal = quantity * basePrice;
+                    total += itemTotal;
+
+                    // Update price in order summary
+                    const itemId = item.querySelector('.quantity-btn').dataset.id;
+                    const summaryPriceElement = document.getElementById(`summary-price-${itemId}`);
+                    if (summaryPriceElement) {
+                        summaryPriceElement.textContent = `$${itemTotal.toFixed(1)}`; // Update with current item total
+                    }
+                });
+                document.getElementById('total-price').textContent = `$${total.toFixed(1)}`;
+            }
+
+            document.querySelectorAll('.quantity-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const itemId = this.dataset.id;
+                    const quantityElement = document.getElementById(`quantity-${itemId}`);
+                    let quantity = parseInt(quantityElement.textContent);
+
+                    if (this.classList.contains('minus-btn')) {
+                        if (quantity > 1) {
+                            quantity--;
+                        }
+                    } else if (this.classList.contains('plus-btn')) {
+                        quantity++;
+                    }
+                    quantityElement.textContent = quantity;
+                    updateCartTotal();
+                });
+            });
+
+            // Initial calculation on page load
+            updateCartTotal();
+        });
+    </script>
+</body>
+</html>

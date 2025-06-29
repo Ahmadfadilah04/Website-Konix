@@ -1,0 +1,836 @@
+/* Import font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Variabel CSS untuk warna */
+:root {
+    --primary-color: #2ee7af; /* Teal */
+    --primary-dark-color: #148766; /* Darker Teal */
+    --secondary-color: #ffffff; /* White */
+    --text-color: #333333; /* Dark Gray */
+    --light-gray: #f5f5f5; /* Light Gray */
+    --medium-gray: #6b7280; /* Medium Gray for text */
+    --dark-gray: #4b5563; /* Dark Gray for headings */
+    --footer-bg: #2d3748; /* Darker gray for footer */
+    --red-color: #ef4444; /* Red for badge */
+    --yellow-color: #facc15; /* Yellow for stars */
+}
+
+/* Reset dasar dan tipografi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-gray);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Tombol dasar */
+.btn {
+    display: inline-block;
+    padding: 12px 32px;
+    border: none;
+    border-radius: 9999px; /* Rounded full */
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--primary-dark-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background-color: #e0e0e0;
+}
+
+.btn-secondary {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:hover {
+    background-color: var(--primary-dark-color);
+}
+
+.btn-outline {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.section-title {
+    font-size: 2.5rem; /* ~40px */
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/* --- Header Section --- */
+.header {
+    background-color: var(--secondary-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 16px 0;
+    position: relative; /* Untuk menu mobile */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav-desktop ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-desktop a {
+    text-decoration: none;
+    color: var(--medium-gray);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-desktop a:hover {
+    color: var(--primary-color);
+}
+
+.header-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.header-icons .icon {
+    color: var(--medium-gray);
+    font-size: 1.125rem; /* ~18px */
+    transition: color 0.2s ease;
+}
+
+.header-icons .icon:hover {
+    color: var(--primary-color);
+}
+
+.hamburger-menu {
+    display: none; /* Sembunyikan secara default di desktop */
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--medium-gray);
+    cursor: pointer;
+    padding: 8px;
+}
+
+.nav-mobile {
+    display: none; /* Sembunyikan secara default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-mobile.active {
+    display: block; /* Tampilkan saat aktif */
+}
+
+.nav-mobile ul {
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.nav-mobile li {
+    margin-bottom: 10px;
+}
+
+.nav-mobile a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.2s ease;
+}
+
+.nav-mobile a:hover {
+    color: var(--primary-color);
+}
+
+.nav-mobile a i {
+    margin-right: 10px;
+}
+
+
+/* --- Hero Section --- */
+.hero-section {
+    background: linear-gradient(to top, var(--primary-color), var(--primary-dark-color));
+    color: var(--secondary-color);
+    padding: 80px 0;
+}
+
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem; /* ~56px */
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem; /* ~20px */
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+}
+
+/* --- About Us Section --- */
+.about-us-section {
+    padding: 80px 0;
+    background-color: var(--secondary-color);
+}
+
+.about-us-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.about-us-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.about-us-image img {
+    max-width: 450px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    background-color: #20c997;
+}
+
+.about-us-content {
+    flex: 1;
+    text-align: left;
+}
+
+.about-us-content h2 {
+    font-size: 2.5rem; /* ~40px */
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-us-content h2 span {
+    color: var(--primary-color);
+}
+
+.about-us-content p {
+    color: var(--medium-gray);
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* --- Features Section --- */
+.features-section {
+    padding: 60px 0;
+    background-color: var(--primary-color);
+    background: linear-gradient(to bottom right, #e0f2f7, #d1e5e8); /* Light blue-green gradient */
+}
+
+.features-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-card {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+}
+
+.feature-icon {
+    background-color: var(--primary-color); /* Ubah ke primary color atau warna lebih terang */
+    color: var(--secondary-color);
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 2.25rem; /* ~36px */
+    margin-bottom: 20px;
+    display: inline-flex; /* Agar padding dan border-radius bekerja dengan baik */
+    align-items: center;
+    justify-content: center;
+}
+
+.feature-card h3 {
+    font-size: 1.375rem; /* ~22px */
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+}
+
+.feature-card p {
+    color: var(--medium-gray);
+    font-size: 0.875rem; /* ~14px */
+}
+
+/* --- Best Seller Section --- */
+.best-seller-section {
+    padding: 80px 0;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image-wrapper {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.product-image-wrapper img {
+    width: 200px; /* Lebar tetap */
+    height: 200px; /* Tinggi tetap */
+    object-fit: cover; /* Pastikan gambar mengisi area dengan baik */
+    border-radius: 8px;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--red-color);
+    color: var(--secondary-color);
+    font-size: 0.75rem; /* ~12px */
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 9999px;
+}
+
+.product-card h3 {
+    font-size: 1.25rem; /* ~20px */
+    font-weight: 600;
+    color: var(--dark-gray);
+    margin-bottom: 8px;
+}
+
+.product-card .price {
+    font-size: 1.125rem; /* ~18px */
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.product-card .price s {
+    font-size: 0.875rem; /* ~14px */
+    font-weight: 400;
+    color: var(--medium-gray);
+    margin-left: 5px;
+}
+
+.product-card .rating {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem; /* ~14px */
+    color: var(--yellow-color);
+}
+
+.product-card .rating i {
+    margin-right: 2px;
+}
+
+.product-card .rating span {
+    color: var(--medium-gray);
+    margin-left: 5px;
+}
+
+/* --- Testimonial Section --- */
+.testimonial-section {
+    padding: 80px 0;
+    background-color: var(--light-gray);
+    text-align: center;
+}
+
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.testimonial-card {
+    background-color: var(--secondary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    text-align: left;
+    position: relative;
+    overflow: hidden; /* Untuk ikon kutipan */
+}
+
+.testimonial-card .quote {
+    color: var(--medium-gray);
+    font-style: italic;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.author-info {
+    display: flex;
+    align-items: center;
+}
+
+.author-info img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.author-info h4 {
+    font-size: 1.125rem; /* ~18px */
+    font-weight: 600;
+    color: var(--dark-gray);
+}
+
+.author-info p {
+    font-size: 0.875rem;
+    color: var(--medium-gray);
+}
+
+.quote-icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    font-size: 3rem; /* ~48px */
+    color: rgba(0, 0, 0, 0.05); /* Sangat samar */
+    z-index: 0;
+}
+
+/* --- Footer Section --- */
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--medium-gray);
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.25rem; /* ~20px */
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    font-size: 0.9375rem; /* ~15px */
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: var(--medium-gray);
+    font-size: 0.9375rem;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: var(--medium-gray);
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.875rem; /* ~14px */
+    color: #a0aec0;
+}
+
+/* Custom Modal Styles (dipindahkan ke sini dari login.css) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1001; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    justify-content: center; /* Menggunakan flex untuk centering */
+    align-items: center; /* Menggunakan flex untuk centering */
+}
+
+.modal-content {
+    background-color: var(--secondary-color);
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: #333;
+    text-decoration: none;
+}
+
+.modal-message {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- Responsive Design --- */
+
+/* Tablet (Max-width 768px) */
+@media (max-width: 768px) {
+    .header-icons,
+    .nav-desktop {
+        display: none; /* Sembunyikan navigasi desktop dan ikon di tablet/mobile */
+    }
+
+    .hamburger-menu {
+        display: block; /* Tampilkan hamburger menu */
+    }
+
+    .header-container {
+        padding: 0 20px; /* Sedikit padding untuk header mobile */
+    }
+
+    /* Hero Section */
+    .hero-container,
+    .about-us-container {
+        flex-direction: column; /* Ubah tata letak menjadi kolom */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-content,
+    .about-us-content {
+        flex: none; /* Hapus flex-grow */
+        width: 100%; /* Ambil lebar penuh */
+        padding: 0 15px; /* Tambah padding horizontal */
+    }
+
+    .hero-image,
+    .about-us-image {
+        flex: none;
+        width: 100%;
+        justify-content: center; /* Pusatkan gambar */
+    }
+
+    .hero-image img,
+    .about-us-image img {
+        max-width: 80%; /* Batasi lebar gambar agar tidak terlalu besar */
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem; /* ~40px */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* ~16px */
+    }
+
+    /* About Us Section */
+    .about-us-section {
+        padding: 60px 0;
+    }
+
+    .about-us-content h2 {
+        font-size: 2rem; /* ~32px */
+    }
+
+    /* Features Section */
+    .features-container {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Atur ulang grid */
+        gap: 20px;
+    }
+
+    /* Best Seller Section */
+    .product-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .product-image-wrapper img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /* Testimonial Section */
+    .testimonial-grid {
+        grid-template-columns: 1fr; /* Ubah ke satu kolom */
+    }
+
+    /* Footer Section */
+    .footer-container {
+        grid-template-columns: 1fr; /* Ubah ke satu kolom */
+        text-align: center;
+    }
+
+    .footer-column ul {
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center; /* Pusatkan item list */
+        margin-bottom: 8px;
+    }
+
+    .social-icons {
+        justify-content: center; /* Pusatkan ikon sosial */
+    }
+}
+
+/* Handphone (Max-width 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .logo {
+        font-size: 1.375rem; /* ~22px */
+    }
+
+    .hamburger-menu {
+        font-size: 1.375rem;
+    }
+
+    /* Hero Section */
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* ~32px */
+        margin-bottom: 15px;
+    }
+
+    .hero-content p {
+        font-size: 0.9375rem; /* ~15px */
+        margin-bottom: 30px;
+    }
+
+    .btn {
+        padding: 10px 24px;
+        font-size: 0.9375rem;
+    }
+
+    /* About Us Section */
+    .about-us-section {
+        padding: 40px 0;
+    }
+
+    .about-us-content h2 {
+        font-size: 1.75rem; /* ~28px */
+    }
+
+    /* Features Section */
+    .features-section {
+        padding: 40px 0;
+    }
+
+    .feature-card {
+        padding: 20px;
+    }
+
+    .feature-icon {
+        font-size: 1.8rem; /* ~28px */
+        padding: 12px;
+        margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+        font-size: 1.125rem; /* ~18px */
+    }
+
+    /* Best Seller Section */
+    .best-seller-section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 2rem; /* ~32px */
+        margin-bottom: 30px;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr; /* Satu kolom untuk handphone */
+    }
+
+    /* Testimonial Section */
+    .testimonial-section {
+        padding: 60px 0;
+    }
+
+    .testimonial-card {
+        padding: 25px;
+    }
+
+    .quote-icon {
+        font-size: 2.5rem; /* ~40px */
+    }
+
+    /* Footer Section */
+    .footer {
+        padding: 40px 0 15px;
+    }
+
+    .footer-column h3 {
+        font-size: 1.125rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-column p,
+    .footer-column ul li,
+    .footer-bottom p {
+        font-size: 0.875rem;
+    }
+}

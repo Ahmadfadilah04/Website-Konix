@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KONIX - Detail Produk</title>
+    <!-- Memuat Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Memuat Google Fonts - Inter untuk tipografi -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Menghubungkan ke file CSS kustom untuk halaman detail produk -->
+    <link rel="stylesheet" href="product-detail.css">
+    <!-- Menghubungkan ke file CSS utama (style.css) untuk header/footer dan variabel global -->
+    <link rel="stylesheet" href="product_detail.css">
+</head>
+<body>
+    <!-- Bagian Header (menggunakan kembali dari desain sebelumnya) -->
+     <header class="header">
+        <div class="container header-container">
+            <!-- Logo -->
+            <div class="logo"><img src="img/konix.png" alt=""></div>
+            <!-- Navigasi Desktop -->
+            <nav class="nav-desktop">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="katalog_product.html">Product</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </nav>
+            <!-- Ikon Keranjang dan Profil (hanya terlihat di desktop) -->
+            <div class="header-icons">
+                <a href="keranjang.html" class="icon"><i class="fas fa-shopping-cart"></i></a>
+                <a href="login.html" class="icon"><i class="fas fa-user-circle"></i></a> <!-- Tautan ke halaman login -->
+            </div>
+            <!-- Tombol Hamburger untuk Navigasi Mobile/Tablet -->
+            <button class="hamburger-menu" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <!-- Navigasi Mobile/Tablet (tersembunyi secara default) -->
+        <nav class="nav-mobile">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="katalog_product.html">Product</a></li>
+                <li><a href="contact_us.html">Contact</a></li>
+                <li><a href="keranjang.html"><i class="fas fa-shopping-cart"></i> Keranjang</a></li>
+                <li><a href="login.html"><i class="fas fa-user-circle"></i> Profil</a></li> <!-- Tautan ke halaman login -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Bagian Detail Produk -->
+    <section class="product-detail-section">
+        <div class="container product-detail-container">
+            <!-- Tombol Kembali -->
+            <div class="back-button-wrapper">
+                <a href="katalog_product.html" class="back-button"><i class="fas fa-arrow-left"></i> Back</a>
+            </div>
+
+            <!-- Konten Utama Detail Produk -->
+            <div class="main-product-content">
+                <!-- Gambar Produk (kiri) -->
+                <div class="product-images">
+                    <img src="img/katalog_baju/Baju_1.png" alt="Baju [A01] Kaos Nusantara" class="main-product-image">
+                    <div class="thumbnail-images">
+                        <img src="img/katalog_baju/Baju_9.png" alt="Thumbnail 1" class="thumbnail-image active">
+                        <img src="img/katalog_baju/Baju_8.png" alt="Thumbnail 2" class="thumbnail-image">
+                        <img src="img/katalog_baju/Baju_1.png" alt="Thumbnail 3" class="thumbnail-image">
+                    </div>
+                </div>
+
+                <!-- Informasi Produk (kanan) -->
+                <div class="product-info">
+                    <h1 class="product-title">Born Free</h1>
+                    <div class="product-rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i> <!-- Bintang kosong -->
+                    </div>
+                    <p class="product-price">Rp. 120K <s>Rp. 200K</s></p>
+
+                    <div class="product-options">
+                        <h4 class="option-label">Size</h4>
+                        <div class="size-options">
+                            <span class="size-box active">S</span>
+                            <span class="size-box">M</span>
+                            <span class="size-box">L</span>
+                            <span class="size-box">XL</span>
+                        </div>
+                    </div>
+
+                    <button class="add-to-cart-button">
+                        Buy <i class="fas fa-shopping-cart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Bagian Testimoni (direuse dari halaman utama) -->
+            <h2 class="section-title">Testimoni</h2>
+            <div class="testimonial-grid">
+                <!-- Testimoni 1 -->
+                <div class="testimonial-card">
+                    <p class="quote">"Design baju okee banget, gw suka sih gayanya anak muda banget"</p>
+                    <div class="author-info">
+                        <img src="img/Testimoni/Fadil.png" alt="Ahmad Fadilah">
+                        <div>
+                            <h4>Ahmad Fadilah</h4>
+                            <p>Customer</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-quote-right quote-icon"></i>
+                </div>
+                <!-- Testimoni 2 -->
+                <div class="testimonial-card">
+                    <p class="quote">"Kualitas bahannya bagus, sablonnya juga rapih dan halus..."</p>
+                    <div class="author-info">
+                        <img src="img/Testimoni/Jajang.png" alt="Jajang Irawan">
+                        <div>
+                            <h4>Jajang Irawan</h4>
+                            <p>Customer</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-quote-right quote-icon"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Bagian Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Kolom 1: About Us -->
+            <div class="footer-column">
+                <h3>About Us</h3>
+                <p>Konix adalah merek pakaian yang berfokus pada gaya trendi dan kenyamanan untuk Gen Z. Kami berkomitmen untuk menyediakan pakaian berkualitas tinggi yang mendukung ekspresi diri Anda.</p>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/ahmad.fadilah.338211/" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/fadillmd_/" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/6281212407746" class="social-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Kolom 2: Page Links -->
+            <div class="footer-column">
+                <h3>Page</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="katalog_product.html">Product</a></li>
+                    <li><a href="contact_us.html">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Kolom 3: Contact Information -->
+            <div class="footer-column">
+                <h3>Contact Information</h3>
+                <ul>
+                    <li><i class="fas fa-phone-alt"></i> +62 812 1240 7746</li>
+                    <li><i class="fab fa-instagram"></i> @konix.cloth</li>
+                    <li><i class="fas fa-envelope"></i> konixcloth@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 KONIX. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript untuk menu hamburger dan fungsionalitas detail produk -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Hamburger menu functionality (reused from style.css)
+            const hamburgerMenu = document.querySelector('.hamburger-menu');
+            const navMobile = document.querySelector('.nav-mobile');
+
+            if (hamburgerMenu && navMobile) {
+                hamburgerMenu.addEventListener('click', function() {
+                    navMobile.classList.toggle('active');
+                });
+
+                navMobile.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navMobile.classList.remove('active');
+                    });
+                });
+            }
+
+            // Product image thumbnail functionality
+            const mainProductImage = document.querySelector('.main-product-image');
+            const thumbnailImages = document.querySelectorAll('.thumbnail-image');
+
+            thumbnailImages.forEach(thumbnail => {
+                thumbnail.addEventListener('click', function() {
+                    // Remove active class from all thumbnails
+                    thumbnailImages.forEach(img => img.classList.remove('active'));
+                    // Add active class to clicked thumbnail
+                    this.classList.add('active');
+                    // Change main image source
+                    mainProductImage.src = this.src.replace('thumb', 'main'); // Assuming naming convention
+                });
+            });
+
+            // Size option selection functionality
+            const sizeBoxes = document.querySelectorAll('.size-box');
+            sizeBoxes.forEach(box => {
+                box.addEventListener('click', function() {
+                    sizeBoxes.forEach(s => s.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

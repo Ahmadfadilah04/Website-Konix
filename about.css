@@ -1,0 +1,662 @@
+/* Import font dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Reset dasar dan tipografi */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333333;
+    background-color: #f5f5f5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Shared Styles (dari style.css) --- */
+/* Gaya-gaya ini diduplikasi di sini untuk penggunaan mandiri. Dalam proyek yang lebih besar,
+   Anda mungkin memiliki satu stylesheet utama untuk elemen-elemen umum ini. */
+
+:root {
+    --primary-color: #20c997; /* Teal */
+    --primary-dark-color: #1a9c78; /* Teal lebih gelap */
+    --secondary-color: #ffffff; /* Putih */
+    --text-color: #333333; /* Abu-abu gelap */
+    --light-gray: #f5f5f5; /* Abu-abu terang */
+    --medium-gray: #6b7280; /* Abu-abu sedang untuk teks */
+    --dark-gray: #4b5563; /* Abu-abu gelap untuk judul */
+    --footer-bg: #2d3748; /* Abu-abu lebih gelap untuk footer */
+}
+
+.header {
+    background-color: var(--secondary-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    padding: 16px 0;
+    position: relative;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.nav-desktop ul {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-desktop a {
+    text-decoration: none;
+    color: var(--medium-gray);
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-desktop a:hover {
+    color: var(--primary-color);
+}
+
+.header-icons {
+    display: flex;
+    gap: 16px;
+}
+
+.header-icons .icon {
+    color: var(--medium-gray);
+    font-size: 1.125rem;
+    transition: color 0.2s ease;
+}
+
+.header-icons .icon:hover {
+    color: var(--primary-color);
+}
+
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: var(--medium-gray);
+    cursor: pointer;
+    padding: 8px;
+}
+
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+.nav-mobile.active {
+    display: block;
+}
+
+.nav-mobile ul {
+    list-style: none;
+    padding: 10px 20px;
+}
+
+.nav-mobile li {
+    margin-bottom: 10px;
+}
+
+.nav-mobile a {
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 500;
+    display: block;
+    padding: 10px 0;
+    transition: color 0.2s ease;
+}
+
+.nav-mobile a:hover {
+    color: var(--primary-color);
+}
+
+.nav-mobile a i {
+    margin-right: 10px;
+}
+
+.footer {
+    background-color: var(--footer-bg);
+    color: var(--medium-gray);
+    padding: 60px 0 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-column h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+}
+
+.footer-column p {
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+}
+
+.footer-column ul li i {
+    margin-right: 10px;
+    color: var(--primary-color);
+}
+
+.footer-column ul li a {
+    text-decoration: none;
+    color: var(--medium-gray);
+    font-size: 0.9375rem;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--secondary-color);
+}
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    color: var(--medium-gray);
+    font-size: 1.25rem;
+    transition: color 0.2s ease;
+}
+
+.social-icon:hover {
+    color: var(--secondary-color);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 20px;
+    text-align: center;
+    font-size: 0.875rem;
+    color: #a0aec0;
+}
+
+/* --- About Us Page Specific Styles --- */
+.about-us-page-section {
+    padding: 50px 0;
+    background-color: var(--light-gray);
+}
+
+.back-button-wrapper {
+    margin-bottom: 30px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--dark-gray);
+    font-weight: 500;
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 9999px;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.back-button i {
+    margin-right: 8px;
+}
+
+.back-button:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
+}
+
+.about-hero-section {
+    display: flex;
+    gap: 40px;
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+}
+
+.about-hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color); /* Latar belakang hijau */
+    border-radius: 8px;
+    overflow: hidden; /* Pastikan gambar tidak keluar dari sudut */
+}
+
+.about-hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block; /* Menghilangkan spasi ekstra di bawah gambar */
+    border-radius: 8px;
+}
+
+.about-hero-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.section-title-about { /* Ini adalah judul "About Us" di sisi kanan, tidak seperti section-title di bawah */
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 20px;
+}
+
+.about-hero-content h2 {
+    font-size: 2rem; /* Ukuran h2 utama */
+    font-weight: 600;
+    color: var(--primary-color); /* Warna teal untuk judul ini */
+    margin-bottom: 15px;
+}
+
+.about-hero-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--medium-gray);
+    margin-bottom: 15px;
+}
+.about-hero-content p:last-of-type {
+    margin-bottom: 0;
+}
+
+.vision-section {
+    background-color: var(--primary-color); /* Warna teal */
+    color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.vision-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.vision-section p {
+    font-size: 1.125rem; /* ~18px */
+    line-height: 1.7;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.why-konix-section {
+    display: flex;
+    gap: 40px;
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+}
+
+.why-konix-content {
+    flex: 1;
+}
+
+.why-konix-content h2 {
+    font-size: 2.25rem; /* ~36px */
+    font-weight: 700;
+    color: var(--dark-gray);
+    margin-bottom: 25px;
+}
+
+.why-konix-content ul {
+    list-style: none; /* Hapus bullet default */
+    padding-left: 0;
+}
+
+.why-konix-content ul li {
+    font-size: 1.125rem; /* ~18px */
+    color: var(--text-color);
+    margin-bottom: 15px;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 25px; /* Memberi ruang untuk pseudo-element */
+}
+
+.why-konix-content ul li::before {
+    content: '\2022'; /* Bullet point unicode */
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0; /* Sesuaikan posisi vertikal bullet */
+    line-height: 1.6; /* Pastikan bullet sejajar dengan teks */
+}
+
+.why-konix-content ul li strong {
+    color: var(--primary-color);
+}
+
+.why-konix-image {
+    flex: 1;
+    position: relative;
+    background-color: var(--primary-dark-color); /* Warna latar belakang gambar */
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.why-konix-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.8); /* Gelapkan sedikit gambar agar overlay teks lebih menonjol */
+}
+
+.why-konix-image .image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--secondary-color);
+    font-size: 2rem; /* ~32px */
+    font-weight: 700;
+    text-align: center;
+    pointer-events: none; /* Jangan intervensi event mouse */
+    background-color: rgba(0, 0, 0, 0.2); /* Latar belakang transparan untuk teks */
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.our-fashion-text {
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.our-fashion-text p {
+    font-size: 1.125rem; /* ~18px */
+    line-height: 1.7;
+    color: var(--medium-gray);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* --- Responsive Design --- */
+
+/* Tablet (Max-width 768px) */
+@media (max-width: 768px) {
+    .header-icons,
+    .nav-desktop {
+        display: none;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .header-container {
+        padding: 0 20px;
+    }
+
+    .nav-mobile.active {
+        display: block;
+    }
+
+    .nav-mobile ul {
+        padding: 10px 20px;
+    }
+
+    .nav-mobile li {
+        margin-bottom: 10px;
+    }
+
+    .nav-mobile a {
+        padding: 10px 0;
+    }
+
+    .about-us-page-section {
+        padding: 40px 0;
+    }
+
+    .about-hero-section,
+    .why-konix-section {
+        flex-direction: column; /* Stack panels vertically */
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .about-hero-image,
+    .why-konix-image {
+        flex: none;
+        width: 100%;
+        max-width: 80%; /* Batasi lebar gambar untuk tablet */
+        margin: 0 auto; /* Pusatkan gambar */
+    }
+
+    .about-hero-content {
+        flex: none;
+        width: 100%;
+        text-align: center; /* Pusatkan teks */
+    }
+
+    .section-title-about {
+        font-size: 2rem; /* Ukuran lebih kecil untuk tablet */
+        margin-bottom: 15px;
+    }
+
+    .about-hero-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .about-hero-content p {
+        font-size: 0.9375rem;
+    }
+
+    .vision-section {
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+
+    .vision-section h2 {
+        font-size: 1.75rem;
+    }
+
+    .vision-section p {
+        font-size: 1rem;
+    }
+
+    .why-konix-content {
+        flex: none;
+        width: 100%;
+    }
+
+    .why-konix-content h2 {
+        font-size: 1.75rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .why-konix-content ul {
+        text-align: left; /* Biarkan bullet point tetap di kiri */
+        padding-left: 25px; /* Sesuaikan padding untuk bullet */
+    }
+
+    .why-konix-content ul li {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .why-konix-image .image-overlay {
+        font-size: 1.5rem; /* Ukuran overlay lebih kecil */
+        padding: 8px 15px;
+    }
+
+    .our-fashion-text {
+        padding: 30px;
+        margin-bottom: 40px;
+    }
+
+    .our-fashion-text p {
+        font-size: 1rem;
+    }
+
+    /* Footer adjustments */
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-column ul {
+        padding: 0;
+    }
+
+    .footer-column ul li {
+        justify-content: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+}
+
+/* Handphone (Max-width 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .about-us-page-section {
+        padding: 30px 0;
+    }
+
+    .back-button-wrapper {
+        margin-bottom: 20px;
+    }
+
+    .back-button {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+
+    .about-hero-section,
+    .why-konix-section {
+        padding: 20px;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+
+    .about-hero-image,
+    .why-konix-image {
+        max-width: 100%; /* Lebar penuh */
+    }
+
+    .section-title-about {
+        font-size: 1.75rem;
+        margin-bottom: 10px;
+    }
+
+    .about-hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .about-hero-content p {
+        font-size: 0.875rem;
+    }
+
+    .vision-section {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+
+    .vision-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .vision-section p {
+        font-size: 0.9375rem;
+    }
+
+    .why-konix-content h2 {
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+    }
+
+    .why-konix-content ul li {
+        font-size: 0.9375rem;
+    }
+
+    .why-konix-image .image-overlay {
+        font-size: 1.2rem;
+        padding: 6px 12px;
+    }
+
+    .our-fashion-text {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+
+    .our-fashion-text p {
+        font-size: 0.9375rem;
+    }
+
+    /* Footer adjustments */
+    .footer {
+        padding: 40px 0 15px;
+    }
+
+    .footer-column h3 {
+        font-size: 1.125rem;
+        margin-bottom: 15px;
+    }
+
+    .footer-column p,
+    .footer-column ul li,
+    .footer-bottom p {
+        font-size: 0.875rem;
+    }
+}
